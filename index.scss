@@ -1,6 +1,6 @@
 @use 'sass:map';
 @use 'sass:math';
-@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,300;0,600;0,700;1,400&display=swap');
 
 $breakpoints: (
   mobile: 350px,
@@ -58,8 +58,8 @@ $very-dark-blue: hsl(209, 33%, 12%);
 }
 
 .rt-main {
-  margin: 80px Max(math.percentage(27 / 375), 50vw - 320px) 49px
-    Max(math.percentage(28 / 375), 50vw - 320px);
+  margin: 80px Max(math.percentage(math.div(27, 375)), 50vw - 320px) 49px
+    Max(math.percentage(math.div(28, 375)), 50vw - 320px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -115,14 +115,14 @@ $very-dark-blue: hsl(209, 33%, 12%);
 
   .form {
     margin-top: 32px;
-    width: math.percentage(281 / 320);
+    width: math.percentage(math.div(281, 320));
 
     @include media(laptop) {
       margin-top: 40px;
-      @include size(637px, 56px);
+      width: 637px;
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
     }
 
     .input-email,
@@ -140,9 +140,28 @@ $very-dark-blue: hsl(209, 33%, 12%);
       padding-inline: 30px;
       border: 1px solid $pale-blue;
 
+      &.invalid{
+        border-color: $light-red;
+      }
+
       @include media(laptop) {
         @include size(421px, 56px);
         font-size: 16px;
+      }
+    }
+
+    .error-message {
+      font-style: italic;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 20px;
+      letter-spacing: 0.15px;
+      color: $light-red;
+      margin-left: 30px;
+      margin-top: 6px;
+
+      &.hidden{
+        display: none;
       }
     }
 

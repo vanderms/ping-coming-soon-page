@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,300;0,600;0,700;1,400&display=swap");
 *,
 *::before,
 *::after {
@@ -91,10 +91,9 @@
   .rt-main .form {
     margin-top: 40px;
     width: 637px;
-    height: 56px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
 }
 .rt-main .form .input-email,
@@ -112,12 +111,28 @@
   padding-inline: 30px;
   border: 1px solid #c2d3ff;
 }
+.rt-main .form .input-email.invalid {
+  border-color: #ff5263;
+}
 @media screen and (min-width: 1200px) {
   .rt-main .form .input-email {
     width: 421px;
     height: 56px;
     font-size: 16px;
   }
+}
+.rt-main .form .error-message {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.15px;
+  color: #ff5263;
+  margin-left: 30px;
+  margin-top: 6px;
+}
+.rt-main .form .error-message.hidden {
+  display: none;
 }
 .rt-main .form .input-submit {
   margin-top: 10px;

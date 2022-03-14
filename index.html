@@ -23,14 +23,19 @@
       <h1 class="title">We are launching <strong>soon!</strong></h1>
       <p class="call-to-action-text">Subscribe and get notified</p>
       <form action="/" class="form">
-        <label class="sr-only" for="email">Your email</label>
-        <input
-          class="input-email"
-          type="email"
-          id="email"
-          placeholder="Your email address"
-          required
-        />
+        <div class="input-email-container">
+          <label class="sr-only" for="email">Your email</label>
+
+          <input
+            class="input-email"
+            type="email"
+            id="email"
+            placeholder="Your email address"
+            required
+          />
+          <div class="error-message hidden">Please provide a valid email address</div>
+        </div>
+
         <input class="input-submit" type="submit" value="Notify Me" />
       </form>
       <img class="hero-image" src="/images/illustration-dashboard.png" alt="" />
@@ -114,5 +119,25 @@
         >. Coded by <a href="https://github.com/vanderms">Vander Santos</a>.
       </p>
     </footer>
+
+    <script>
+      const errorMessage = document.querySelector('.error-message');
+      const form = document.querySelector('.form');
+      const email = document.querySelector('.input-email');
+
+      email.addEventListener('invalid', (e) => {
+        e.preventDefault();
+        errorMessage.classList.remove('hidden');
+        email.classList.add('invalid');
+      })
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        errorMessage.classList.add('hidden');
+        email.classList.remove('invalid');
+        form.reset();
+      })
+
+    </script>
   </body>
 </html>
