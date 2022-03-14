@@ -28,14 +28,27 @@
 }
 
 .rt-main {
-  margin: 81px max(7.2%, 50vw - 320px) 9.8666666667% max(7.4666666667%, 50vw - 320px);
+  margin: 80px max(7.2%, 50vw - 320px) 49px max(7.4666666667%, 50vw - 320px);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+@media screen and (min-width: 1200px) {
+  .rt-main .logo-link {
+    width: 90px;
+    height: 39px;
+    display: grid;
+    place-items: center;
+  }
+}
 .rt-main .logo {
   width: 56px;
   height: auto;
+}
+@media screen and (min-width: 1200px) {
+  .rt-main .logo {
+    width: 90px;
+  }
 }
 .rt-main .title {
   margin-top: 32px;
@@ -44,6 +57,13 @@
   line-height: 32px;
   text-align: center;
   color: #969696;
+}
+@media screen and (min-width: 1200px) {
+  .rt-main .title {
+    margin-top: 40px;
+    font-size: 48px;
+    line-height: 60px;
+  }
 }
 .rt-main .title strong {
   font-weight: 700;
@@ -56,9 +76,26 @@
   line-height: 15px;
   text-align: center;
 }
+@media screen and (min-width: 1200px) {
+  .rt-main .call-to-action-text {
+    margin-top: 16px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
 .rt-main .form {
   margin-top: 32px;
   width: 87.8125%;
+}
+@media screen and (min-width: 1200px) {
+  .rt-main .form {
+    margin-top: 40px;
+    width: 637px;
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 .rt-main .form .input-email,
 .rt-main .form .input-submit {
@@ -75,6 +112,13 @@
   padding-inline: 30px;
   border: 1px solid #c2d3ff;
 }
+@media screen and (min-width: 1200px) {
+  .rt-main .form .input-email {
+    width: 421px;
+    height: 56px;
+    font-size: 16px;
+  }
+}
 .rt-main .form .input-submit {
   margin-top: 10px;
   font-weight: 600;
@@ -88,6 +132,14 @@
 .rt-main .form .input-submit:hover {
   opacity: 0.8;
 }
+@media screen and (min-width: 1200px) {
+  .rt-main .form .input-submit {
+    width: 200px;
+    height: 56px;
+    margin-top: 0;
+    font-size: 16px;
+  }
+}
 .rt-main .hero-image {
   margin-top: 72px;
   width: 100%;
@@ -99,6 +151,11 @@
   justify-content: center;
   align-items: center;
   gap: 12px;
+}
+@media screen and (min-width: 1200px) {
+  .rt-main .social-media-contact {
+    margin-top: 72px;
+  }
 }
 .rt-main .social-media-contact .social-link {
   width: 32px;
