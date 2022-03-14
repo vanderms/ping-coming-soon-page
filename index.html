@@ -16,25 +16,27 @@
     <link rel="stylesheet" href="/index.css" />
   </head>
   <body>
-    <main class="rt-homepage">
-      <a href="/" aria-label="homepage">
+    <main class="rt-main">
+      <a href="/" class="logo-link" aria-label="homepage">
         <img class="logo" src="/images/logo.svg" alt="" />
       </a>
-      <h1 id="h1" class="title">We are launching soon!</h1>
-      <p class="text">Subscribe and get notified</p>
+      <h1 class="title">We are launching <strong>soon!</strong></h1>
+      <p class="call-to-action-text">Subscribe and get notified</p>
       <form action="/" class="form">
         <label class="sr-only" for="email">Your email</label>
         <input
+          class="input-email"
           type="email"
           id="email"
           placeholder="Your email address"
           required
         />
-        <input type="submit" value="Notify Me" />
+        <input class="input-submit" type="submit" value="Notify Me" />
       </form>
-      <img src="/images/illustration-dashboard.png" alt="" />
+      <img class="hero-image" src="/images/illustration-dashboard.png" alt="" />
       <address class="social-media-contact">
         <a
+          class="social-link"
           href="http://www.facebook.com"
           aria-label="follow us on facebook"
           target="_blank"
@@ -55,6 +57,7 @@
           </svg>
         </a>
         <a
+          class="social-link"
           href="http://www.twitter.com"
           aria-label="follow us on twitter"
           target="_blank"
@@ -75,6 +78,7 @@
           </svg>
         </a>
         <a
+          class="social-link"
           href="http://www.instagram.com"
           aria-label="follow us on instagram"
           target="_blank"
@@ -97,7 +101,9 @@
           </svg>
         </a>
       </address>
-      <footer>&copy; Copyright Ping. All rights reserved.</footer>
+      <footer class="copyright">
+        &copy; Copyright Ping. All rights reserved.
+      </footer>
     </main>
 
     <footer class="rt-footer">
@@ -105,7 +111,7 @@
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
+        >. Coded by <a href="https://github.com/vanderms">Vander Santos</a>.
       </p>
     </footer>
   </body>
