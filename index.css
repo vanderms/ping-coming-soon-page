@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: normal;
+  font-style: normal;
+  color: inherit;
+  list-style-type: none;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+.rt-footer .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.rt-footer .attribution a {
+  color: #3e52a3;
+}
+
+/*# sourceMappingURL=index.css.map */
