@@ -28,7 +28,7 @@
 }
 
 .rt-main {
-  margin: 81px 7.2% 9.8666666667% 7.4666666667%;
+  margin: 81px max(7.2%, 50vw - 320px) 9.8666666667% max(7.4666666667%, 50vw - 320px);
   display: flex;
   flex-direction: column;
   align-items: center;

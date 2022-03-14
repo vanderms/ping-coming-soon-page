@@ -58,11 +58,11 @@ $very-dark-blue: hsl(209, 33%, 12%);
 }
 
 .rt-main {
-  margin: 81px math.percentage(27 / 375) math.percentage(37/ 375)
-    math.percentage(28 / 375);
+  margin: 81px Max(math.percentage(27 / 375), 50vw - 320px) math.percentage(37/ 375)
+    Max(math.percentage(28 / 375), 50vw - 320px);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center;  
 
   .logo {
     @include size(56px, auto);
