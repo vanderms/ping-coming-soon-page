@@ -21,4 +21,10 @@
   color: #3e52a3;
 }
 
+.sr-only {
+  display: block;
+  position: absolute;
+  left: -100vw;
+}
+
 /*# sourceMappingURL=index.css.map */
